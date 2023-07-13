@@ -1,0 +1,11 @@
+Install Docker and use docker compose version v1.28.0
+
+git clone https://github.com/DefectDojo/django-DefectDojo.git
+
+cd django-DefectDojo/
+
+./dc-build.sh
+
+./dc-up.sh mysql-rabbitmq
+
+It would be accessible on port 8080

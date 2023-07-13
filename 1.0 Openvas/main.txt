@@ -2,4 +2,11 @@ Openvas is used for vulnerability test in SecOps.
 
 The best way is to dockerize the application using the docker compose file
 
-It needs about 60G of RAM and 4Cpus
+It needs about 60G of RAM and 4cpus
+
+Install Docker and Docker Compose
+
+Open the necessary ports (9392)
+
+Username and Password is admin
+
