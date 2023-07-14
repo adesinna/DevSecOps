@@ -1,4 +1,4 @@
-Install Docker and use docker compose version v1.28.0
+Install Docker and use docker compose version v1.28.0, t2 medium
 
 git clone https://github.com/DefectDojo/django-DefectDojo.git
 
@@ -6,7 +6,9 @@ cd django-DefectDojo/
 
 ./dc-build.sh
 
-./dc-up.sh mysql-rabbitmq # you can open another shell to run the command below
+./dc-up.sh mysql-rabbitmq -d # you can open another shell to run the command below
 
-docker-compose logs initializer | grep "Admin password:" # username: Admin, Password: v4XwTUFN7hiGke4LKxpwwN
+docker-compose logs initializer | grep "Admin password:" # username: Admin, Password:
+
 It would be accessible on port 8080
+

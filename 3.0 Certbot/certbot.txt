@@ -1,0 +1,17 @@
+sudo apt update
+
+sudo apt install certbot
+
+sudo certbot certonly --standalone --email shananatest@gmail.com -d defectjojo.unisexshop.org
+
+sudo apt install nginx
+
+cd /etc/nginx/sites-available
+
+sudo mv default default.reference # so you can create yours
+
+sudo vim default # use you port and domain name
+
+sudo systemctl restart nginx
+
+sudo nginx -t
