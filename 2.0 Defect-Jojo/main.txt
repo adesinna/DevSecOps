@@ -12,4 +12,3 @@ docker-compose logs initializer | grep "Admin password:" # username: Admin, Pass
 
 It would be accessible on port 8080
 
-HnVCGw2iFBFlN2cY1yYI3S
