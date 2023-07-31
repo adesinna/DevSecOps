@@ -1,0 +1,14 @@
+We look to implement defectjojo api to our pipeline, also we get the reports of the vulnerabilities to our defect jojo,
+and it would classify it using the apis.
+
+Product Type:
+    This is how you divide your applications into different categories.
+    Example Frontend, Backends, Sales etc
+
+
+Product:
+    This is an app that get tested
+
+Engagement:
+    This is the different test
+

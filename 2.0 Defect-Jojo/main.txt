@@ -11,4 +11,3 @@ cd django-DefectDojo/
 docker-compose logs initializer | grep "Admin password:" # username: Admin, Password:
 
 It would be accessible on port 8080
-
