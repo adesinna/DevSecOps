@@ -1,0 +1,12 @@
+This is used to host static website
+
+- /etc/nginx/nginx.conf is the location where the configuration is
+
+- delete everything inside it
+
+- use the configuration
+
+- sudo nginx -t # this will verify
+
+- systemctl reload nginx
+

@@ -1,0 +1,3 @@
+1. Get an ubuntu virtual machine
+
+2. Use the script to install nginx

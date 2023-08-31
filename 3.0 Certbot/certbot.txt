@@ -2,7 +2,7 @@ sudo apt update
 
 sudo apt install certbot
 
-sudo certbot certonly --standalone --email shananatest@gmail.com -d defectjojo.unisexshop.org
+sudo certbot certonly --standalone --email shina@gonje.com -d staging.gonje.com
 
 sudo apt install nginx
 
