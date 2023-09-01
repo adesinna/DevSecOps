@@ -1,0 +1,1 @@
+This location block is used to define a path, say 192.168.33.10/health
