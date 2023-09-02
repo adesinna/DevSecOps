@@ -1,0 +1,38 @@
+- Get an ec2 instance
+
+- Install Nginx using the script
+
+- Get your domain and subdomains
+
+- Point the subdomains to the instance running
+
+- default configuration is at
+
+  /etc/nginx/
+
+- copy the nginx.conf file
+
+- For each site we give a new conf for them
+    this will be located in
+    /etc/nginx/conf.d
+
+- Default template is located at
+    /etc/nginx/sites-enabled
+
+- in conf.d see the configurations
+
+- see the logs
+    sudo tail -f /var/log/nginx/access-1.log
+
+- Next is ssl
+
+    1. sudo snap install --classic certbot  # sudo snap remove --classic certbot
+
+    2. sudo  certbot --nginx
+
+    3. choose the sites you want to secure # 1,2
+
+    4. Reload nginx
+
+    5. open 443
+

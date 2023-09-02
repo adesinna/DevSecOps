@@ -1,0 +1,6 @@
+Logs are located at
+
+/var/log/nignx
+
+access.log  # all entries response
+error.log # nginx failure in configurations
