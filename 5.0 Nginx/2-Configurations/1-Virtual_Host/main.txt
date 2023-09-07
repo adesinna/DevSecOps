@@ -8,5 +8,5 @@ This is used to host static website
 
 - sudo nginx -t # this will verify
 
-- systemctl reload nginx
+- sudo systemctl reload nginx
 

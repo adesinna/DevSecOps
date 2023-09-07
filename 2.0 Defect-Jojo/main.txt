@@ -8,6 +8,7 @@ cd django-DefectDojo/
 
 ./dc-up.sh mysql-rabbitmq -d # you can open another shell to run the command below
 
-docker-compose logs initializer | grep "Admin password:" # username: Admin, Password:
+docker-compose logs initializer | grep "Admin :" # to get username and password
 
 It would be accessible on port 8080
+
