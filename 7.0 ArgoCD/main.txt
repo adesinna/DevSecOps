@@ -1,0 +1,37 @@
+Step 1:
+    - Set up a jenkins server using 1-jenkins.sh and t2 medium
+
+    - Open port 8080
+
+    - Install these plugins
+
+        SonarQube Scanner
+
+        Build Timestamp
+
+        Pipeline Maven Integration
+
+        Pipeline Utility Steps
+
+        docker pipeline
+
+        docker
+
+    - Integrating with Sonarqube
+
+        Manage Jenkins > Tools > SonarQube Scanner
+
+            Name: sonar4.7
+            Version: 4.7.0.2747
+
+Step 2:
+    Install Sonarqube with sonar.sh and t2 medium
+
+    sudo ./sonar.sh
+
+
+Step 3:
+    Create your cluster
+
+
+Step 4

@@ -1,0 +1,140 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payassistbackend
+spec:
+  selector:
+    matchLabels:
+      app: payassistbackend
+  template:
+    metadata:
+      labels:
+        app: payassistbackend
+    spec:
+      containers:
+        - name: payassist-backend
+          image: activedgetechnologies/payassist-backend:v-dev-75
+          ports:
+            - containerPort: 8080
+          env:
+            - name: KEYCLOAK_REALM
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: KEYCLOAK_REALM
+            - name: KEYCLOAK_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: KEYCLOAK_HOST
+
+            - name: KEYCLOAK_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: KEYCLOAK_PORT
+            - name: KEYCLOAK_CLIENT_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: KEYCLOAK_CLIENT_ID
+            - name: KEYCLOAK_CLIENT_SECRET
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: KEYCLOAK_CLIENT_SECRET
+            - name: MONGO_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: MONGO_HOST
+
+            - name: MONGO_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: MONGO_HOST
+
+            - name: MONGO_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: MONGO_PORT
+
+            - name: MONGO_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: MONGO_DB
+
+            - name: KEYCLOAK_CONTEXT_PATH
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: KEYCLOAK_CONTEXT_PATH
+            - name: MONGODB_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: MONGODB_URI
+            - name: APPRUVE_TEST_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: APPRUVE_TEST_TOKEN
+            - name: CLOUDINARY_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: CLOUDINARY_NAME
+            - name: CLOUDINARY_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: CLOUDINARY_API_KEY
+            - name: CLOUDINARY_API_SECRET
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: CLOUDINARY_API_SECRET
+
+            - name: MAIL_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: MAIL_HOST
+
+            - name: MAIL_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: MAIL_PORT
+
+            - name: MAIL_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: MAIL_USERNAME
+
+            - name: MAIL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: MAIL_PASSWORD
+
+             - name: VERIFY_EMAIL_TOKEN_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: payassist-config
+                  key: VERIFY_EMAIL_TOKEN_URI
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pabackendsvc
+spec:
+  selector:
+    app: payassistbackend
+  ports:
+    - port: 8081
+      targetPort: 8080
