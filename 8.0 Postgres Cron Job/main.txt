@@ -1,0 +1,6 @@
+chmod 700 restart-postgres.sh
+
+crontab -e
+
+0 */12 * * * /path/to/restart_postgres.sh # replace the path with the absolute path
+
